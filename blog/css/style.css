@@ -67,15 +67,28 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "racing";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "headings";
+    src: url('../fonts/sans-serif/ultra-regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 /*TYPOGRAPHY*/
 p{
     font-family: lato,Arial, sans-serif;
 }
 h1,h2,h3,h4{
-    font-family: opensans, 'Times New Roman', serif;
+    font-family: headings, 'Times New Roman', serif;
     letter-spacing: .0235rem;
 }
 h1{
+    margin-top: 0;
     text-align: center;
     font-size:3rem;
     letter-spacing: .25rem;
@@ -83,14 +96,15 @@ h1{
 }
 .highlight{
     display: inline-block;
-    font-family: montserrat,Arial, Helvetica, sans-serif;
+    font-family: racing;
     border: 1px solid black;
     padding: .8rem 1.8rem;
     border-radius: .3rem;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: 1.2rem;
+    border-bottom-left-radius: .8rem;
     color:white;
-    font-weight: bold;
     background-color: rgb(131, 23, 23);
 }
 /*GENERAL SETUPS AND DEFAULTS*/
@@ -110,8 +124,9 @@ header{
     padding:.5rem 0rem 1rem 0rem;
 }
 nav{
-    margin-top: 3rem;
+    margin-top: .5rem ;
 }
+
 .main-section{
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -155,7 +170,9 @@ figure{
     background-color: white;
 }
 .subsection figure figcaption{
+    margin-top: -.2rem;
     padding:.5rem .5rem;
+    background-color: lightblue;
 }
 /*Links and navigation*/
 a{
@@ -165,21 +182,42 @@ a{
     font-size: .4rem;
 }
 nav a{
+    margin: 0 .8rem;
     display: inline-block;
     padding:1.25rem 2rem;
     font-size: 1.5rem;
     font-family: lato,Arial,sans-serif;
-    color: rgb(9, 9, 72)
+    color: rgb(9, 9, 72);
+    border-radius: 2rem;
+    width:fit-content;
+}
+nav a:hover{
+    background-color: rgb(32, 28, 101);
+    color:white;
+    transform: scale(1.1);
 }
 nav{
     border-top:1px solid black;
     border-bottom:1px solid black;
 }
+
 button{
+    font-family: headings, 'Times New Roman', serif;
+    font-size: 3rem;
     display: inline-block;
-    padding:1.5rem 3rem;
-    background-color:  blue;
+    padding:1.5rem 3.5rem;
+    background-color:  rgb(235, 232, 232);
+    color:black;
+    border-radius: 3rem;
+    margin-top:6rem;
+}
+button:hover{
+    background-color: rgb(28, 28, 75);
     color:white;
-    border-radius: 1rem;
-    margin-top:3rem;
+}
+footer{
+    display: flex;
+}
+.right{
+   margin-right: 15rem;
 }
