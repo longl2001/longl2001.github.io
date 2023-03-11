@@ -209,7 +209,7 @@ button{
     background-color:  rgb(235, 232, 232);
     color:black;
     border-radius: 3rem;
-    margin-top:6rem;
+    margin-top:5rem;
 }
 button:hover{
     background-color: rgb(28, 28, 75);
